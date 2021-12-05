@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/rich-text-editor-v1/static/css/main.818a5af7.chunk.css",
+    "main.js": "/rich-text-editor-v1/static/js/main.efe2a739.chunk.js",
+    "main.js.map": "/rich-text-editor-v1/static/js/main.efe2a739.chunk.js.map",
+    "runtime-main.js": "/rich-text-editor-v1/static/js/runtime-main.c4a1ff84.js",
+    "runtime-main.js.map": "/rich-text-editor-v1/static/js/runtime-main.c4a1ff84.js.map",
+    "static/js/2.dfef1ece.chunk.js": "/rich-text-editor-v1/static/js/2.dfef1ece.chunk.js",
+    "static/js/2.dfef1ece.chunk.js.map": "/rich-text-editor-v1/static/js/2.dfef1ece.chunk.js.map",
+    "static/js/3.5867fc7d.chunk.js": "/rich-text-editor-v1/static/js/3.5867fc7d.chunk.js",
+    "static/js/3.5867fc7d.chunk.js.map": "/rich-text-editor-v1/static/js/3.5867fc7d.chunk.js.map",
+    "index.html": "/rich-text-editor-v1/index.html",
+    "static/css/main.818a5af7.chunk.css.map": "/rich-text-editor-v1/static/css/main.818a5af7.chunk.css.map",
+    "static/js/2.dfef1ece.chunk.js.LICENSE.txt": "/rich-text-editor-v1/static/js/2.dfef1ece.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c4a1ff84.js",
+    "static/js/2.dfef1ece.chunk.js",
+    "static/css/main.818a5af7.chunk.css",
+    "static/js/main.efe2a739.chunk.js"
+  ]
+}
