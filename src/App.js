@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import axios from 'axios';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 
 const App = () => {
   const [fileData, setFileData] = useState('');
   const [fileName, setFileName] = useState('');
+  const [pdf, setPDF] = useState(null);
   const [editor, setEditor] = useState(null);
+  const inputPDF = useRef(null);
 
   const baseURL =
     'https://ipchgmr3va.execute-api.ap-southeast-2.amazonaws.com/prod';
@@ -34,6 +37,14 @@ const App = () => {
     });
   };
 
+  const openInputWindow = () => {
+    inputPDF.current.click();
+  };
+
+  const onFileChange = (e) => {
+    setPDF(e.target.files[0]);
+  };
+
   return (
     <div style={styles.appContainer}>
       <div style={styles.buttonContainer}>
@@ -45,6 +56,13 @@ const App = () => {
         />
         <button onClick={createFile}>Create file</button>
         <button onClick={getFile}>Get file</button>
+        <button onClick={openInputWindow}>Upload PDF</button>
+        <input
+          type='file'
+          ref={inputPDF}
+          style={{ display: 'none' }}
+          onChange={onFileChange}
+        />
       </div>
       <div style={styles.mainContainer}>
         <div style={styles.editorContainer}>
@@ -57,7 +75,14 @@ const App = () => {
             onChange={handleOnEditorChange}
           />
         </div>
-        <div style={styles.displayContainer}>{fileData}</div>
+        {/* <div style={styles.displayContainer}>{fileData}</div> */}
+        <div style={styles.displayContainer}>
+          {pdf && (
+            <Document file={pdf}>
+              <Page pageNumber={1} />
+            </Document>
+          )}
+        </div>
       </div>
     </div>
   );
